@@ -1,8 +1,3 @@
-Here's your **final `README.md` file** with all details properly formatted and a placeholder for the demo video section. I've included the architecture image reference and left a space for the video later:
-
----
-
-````markdown
 # 🛡️ Disaster Recovery as Code (DRAC) – Terraform + AWS
 
 This project implements a highly available and resilient cloud infrastructure using **Terraform** on **AWS**, with integrated **disaster recovery mechanisms**.
@@ -23,7 +18,7 @@ This project implements a highly available and resilient cloud infrastructure us
 
 SNS email alerts are triggered on:
 
-- ❗ RDS Low Storage (CloudWatch alarm)
+- ❗ RDS Low Storage (CloudWatch alarm)  
 - 🧪 Lambda manual invocation for disaster simulation
 
 > ✅ Ensure your SNS email subscription is confirmed before testing.
@@ -46,7 +41,7 @@ disaster-recovery-terraform/
 │       └── main.tf
 ├── terraform.tfvars
 └── README.md
-````
+```
 
 ---
 
@@ -54,15 +49,15 @@ disaster-recovery-terraform/
 
 ![Architecture Diagram](../assets/architecture.png)
 
-* **Region:** `us-east-1`
-* **Components:**
+**Region:** `us-east-1`  
+**Components:**
 
-  * VPC with 2 public subnets
-  * EC2 (web server)
-  * RDS (MySQL)
-  * S3 (snapshot backup)
-  * Lambda (DR trigger logic)
-  * CloudWatch + SNS → Email alerts
+- VPC with 2 public subnets  
+- EC2 (web server)  
+- RDS (MySQL)  
+- S3 (snapshot backup)  
+- Lambda (DR trigger logic)  
+- CloudWatch + SNS → Email alerts  
 
 ---
 
@@ -70,9 +65,9 @@ disaster-recovery-terraform/
 
 ### ✅ Prerequisites
 
-* AWS CLI configured (`aws configure`)
-* Terraform ≥ v1.0 installed
-* SNS email alert subscription confirmed
+- AWS CLI configured (`aws configure`)
+- Terraform ≥ v1.0 installed
+- SNS email alert subscription confirmed
 
 ### ⚙️ Deploy Infrastructure
 
@@ -98,36 +93,14 @@ terraform apply
 
 ## 🎥 Demo Video
 
-📹 [Watch Local Demo]("https://drive.google.com/file/d/167EFIBHzyB6cNo808zWcnw0j5zc9L39X/view?usp=sharing")
+📹 [Watch Demo on Google Drive](https://drive.google.com/file/d/167EFIBHzyB6cNo808zWcnw0j5zc9L39X/view?usp=sharing)
 
+> Covers EC2 taint simulation, RDS alert trigger, and Lambda test
 
 ---
 
 ## 🧾 License
 
-MIT © 2025 Hameed Juhair
-**Email:** [juhairhameed17@gmail.com](mailto:juhairhameed17@gmail.com)
+MIT © 2025 Hameed Juhair  
+**Email:** [juhairhameed17@gmail.com](mailto:juhairhameed17@gmail.com)  
 **GitHub:** [Hameedjuhair](https://github.com/Hameedjuhair)
-
-```
-
----
-
-### 🔧 What to do next:
-
-1. **Save the architecture diagram** as:
-```
-
-disaster-recovery-terraform/assets/architecture.png
-
-````
-(Use the architecture image I just gave you)
-
-2. **Upload your demo video** later, and update the section:
-```markdown
-👉 *[Insert screen-recorded demo video here]*
-````
-
-with a video link or embedded GIF/YouTube.
-
-Would you like help compressing and uploading the demo video or converting it to a GIF?
