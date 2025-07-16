@@ -98,7 +98,7 @@ terraform apply
 
 ## 🎥 Demo Video
 
-📹 [Watch Local Demo](./assets/drac-demo.mkv)
+📹 [Watch Local Demo]([./assets/drac-demo.mkv](https://drive.google.com/file/d/167EFIBHzyB6cNo808zWcnw0j5zc9L39X/view?usp=sharing))
 
 
 ---
