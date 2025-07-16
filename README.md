@@ -47,7 +47,8 @@ disaster-recovery-terraform/
 
 ## 📐 Architecture
 
-![Architecture Diagram](../assets/architecture.png)
+![Architecture Diagram](assets/architecture.png)
+
 
 **Region:** `us-east-1`  
 **Components:**
