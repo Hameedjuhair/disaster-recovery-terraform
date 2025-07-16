@@ -103,5 +103,5 @@ terraform apply
 ## 🧾 License
 
 MIT © 2025 Hameed Juhair  
-**Email:** [juhairhameed17@gmail.com](mailto:juhairhameed17@gmail.com)  
+**Email:** [juhairhameed@gmail.com](mailto:juhairhameed@gmail.com)  
 **GitHub:** [Hameedjuhair](https://github.com/Hameedjuhair)
