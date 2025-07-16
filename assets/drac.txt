@@ -1,0 +1,128 @@
+Perfect, Sir! Here's your **Demo Narration Script** written as clear **Notepad-style instructions**, ideal for your screen recording. You can copy each step into your Notepad or display them sequentially during the video recording.
+
+---
+
+## 🧾 Demo Narration Script – Disaster Recovery as Code (DRAC)
+
+---
+
+### 🎬 Intro
+
+```
+🚀 Welcome to DRAC: Disaster Recovery as Code using Terraform + AWS.
+
+In this demo, we'll simulate 4 disaster recovery test cases and validate auto-recovery and alerts.
+```
+
+---
+
+### ✅ STEP 1: Launch the Infrastructure
+
+```
+📁 Navigate to: envs/us-east-1
+🖥️ Run the following:
+    terraform init
+    terraform apply
+
+✅ Infrastructure deployed in us-east-1:
+- VPC
+- EC2 instance
+- RDS (MySQL)
+- Lambda
+- CloudWatch Alarm
+- SNS Topic
+- S3 Bucket
+```
+
+---
+
+### 🧪 STEP 2: EC2 Instance Failure Simulation
+
+```
+🧪 Test Case 1: EC2 Failure Recovery
+
+1️⃣ Go to AWS Console → EC2
+2️⃣ Stop the instance (manually)
+3️⃣ Wait for 1 minute
+
+🛠️ In terminal:
+    terraform taint module.ec2.aws_instance.drac_server
+    terraform apply
+
+✅ EC2 instance recreated by Terraform
+```
+
+---
+
+### 🧪 STEP 3: RDS Alert via CloudWatch
+
+```
+🧪 Test Case 2: Simulate RDS Low Storage
+
+1️⃣ Go to AWS Console → RDS
+2️⃣ Stop the RDS instance
+
+⏱️ Wait ~1-2 minutes
+
+✅ CloudWatch detects low storage
+✅ SNS sends email alert: "RDS Low Storage"
+
+📬 Check your email: juhairhameed17@gmail.com
+```
+
+---
+
+### 🧪 STEP 4: Subnet Availability Zone Failure
+
+```
+🧪 Test Case 3: Simulate AZ Subnet Isolation
+
+1️⃣ Modify main.tf to use only subnet B
+2️⃣ Stop EC2 and RDS from AWS Console
+3️⃣ Reapply Terraform to fallback into alternate subnet
+
+✅ Services recover in available subnet
+```
+
+---
+
+### 🧪 STEP 5: Lambda + SNS Trigger
+
+```
+🧪 Test Case 4: Manually Trigger Lambda
+
+1️⃣ Go to AWS Console → Lambda → Select drac-prod-dr-lambda
+2️⃣ Click "Test" or run via AWS CLI:
+    aws lambda invoke --function-name drac-prod-dr-lambda --payload '{}' output.json
+
+✅ Lambda function executes
+✅ SNS email alert received
+```
+
+---
+
+### ✅ Final Verification
+
+```
+✅ EC2 auto-recovery: PASSED
+✅ RDS alert email: PASSED
+✅ Subnet fallback: PASSED
+✅ Lambda-SNS trigger: PASSED
+
+🎉 DRAC demo completed successfully!
+```
+
+---
+
+### 📌 Outro
+
+```
+Thank you for watching! 
+This project showcases how to build automated disaster recovery systems using Terraform + AWS.
+
+📂 GitHub: https://github.com/Hameedjuhair
+📧 Contact: juhairhameed17@gmail.com
+```
+
+---
+
